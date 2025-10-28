@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "G-calize: Google Calendar Customizer",
+  "version": "1.0.0",
+  "description": "Предоставляет пользователю возможность детально настраивать свой Google Календарь.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://calendar.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://calendar.google.com/calendar/*"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Открыть настройки G-calize"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/*.png"
+      ],
+      "matches": [
+        "https://calendar.google.com/*"
+      ]
+    }
+  ]
+}
