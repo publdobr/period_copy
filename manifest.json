@@ -23,6 +23,7 @@
       "run_at": "document_end"
     }
   ],
+  "options_page": "options.html",
   "action": {
     "default_icon": {
       "16": "icons/icon16.png",
