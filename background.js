@@ -2,7 +2,7 @@
 
 const defaultConfig = {
   today: {
-    active: true,
+    active: false,
     activeBG: false,
     activeBorder: true,
     accent: '#1a73e8',
@@ -24,10 +24,15 @@ const defaultConfig = {
   darkBackground: [
     '#5c2b29', '#3c4043', '#3c4043', '#3c4043', '#3c4043', '#3c4043', '#283c33',
   ],
+   menstrualCycle: {
+    cycleLength: 28,
+    periodLength: 5,
+    startDate: new Date().toISOString().slice(0, 10),
+  },
 };
 
 const defaultHolidays = {
-  active: true,
+  active: false,
   color: '#d50000',
   darkColor: '#f28b82',
   background: '#ffffff',
